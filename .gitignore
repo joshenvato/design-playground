@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Storybook build output
+storybook-static/
+
+# Vite / Storybook cache
+node_modules/.cache/
+
+# npm auth token — never commit this
+.npmrc
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.local
