@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+          echo "@envato:registry=https://npm.pkg.github.com" >> .npmrc
       - run: npm ci --legacy-peer-deps
       - run: npm run build-storybook
       - uses: actions/upload-pages-artifact@v3
